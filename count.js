@@ -1,16 +1,23 @@
+require('dotenv').config();
+
 const request = require('request');
 // Remove later
 const cheerio = require('cheerio');
-require('dotenv').config();
+
 var counts;
-const password=process.env.PASS
+
+const password=process.env.PASS;
+
 counter = function (message, api) {
+
     request.post({
+
         headers: {
             'content-type': 'application/x-www-form-urlencoded'
         },
         url: 'https://devspace.csivit.com/regCount',
         body: "pass="+password
+
     }, (error, response, html) => {
         if (!error && response.statusCode == 200) {
             const $ = cheerio.load(html);
@@ -21,8 +28,6 @@ counter = function (message, api) {
                 chat_id: message.chat.id,
                 text: counts
             });
-
-
         }
     });
 }
