@@ -13,4 +13,10 @@ It's not a bot, it's a BroBot!
 - Telegram account
 - Add @csi_brobot, enter the password
 
+# Useage
+
+- Add to group by add @csi_brobot as a member
+- Bot can be triggered by a mention(@Brobot) or by reply to it's message
+
+
 Happy Chatting :)
